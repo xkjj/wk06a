@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game deals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/furtive/2.3.0/furtive.min.css">
+</head>
+
+<body>
+
+    <div class="measure p2">
+
+        <h2>Game Deals</h2>
+        <h3>
+            <%= moredata %>
+        </h3>
+
+        <% apideals.forEach(element=> { %>
+
+            <div class="grd-row brdr--light-gray">
+                <h4 class="px2">
+                    <%= element.title %>
+                </h4>
+                <p class="mx2">
+                    <%= element.salePrice %> <span style="text-decoration: line-through;">
+                            <%= element.normalPrice %>
+                        </span>
+                </p>
+            </div>
+
+            <% }); %>
+
+    </div>
+
+
+
+</body>
+
+</html>
